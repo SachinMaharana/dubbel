@@ -1,4 +1,7 @@
-[target.x86_64-apple-darwin]
-rustflags= ["-C", "link-arg=-fuse-ld=lld"]
 [target.aarch64-apple-darwin]
-rustflags= ["-C", "link-arg=-fuse-ld=/opt/homebrew/opt/llvm/bin/ld64.lld"]
+rustflags = [ 
+    "-C",
+    "link-arg=-fuse-ld=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld",
+    "-C",
+    "link-arg=-ld_new",
+]
